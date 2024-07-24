@@ -9,7 +9,7 @@ Run `npm i` for install pkt in this project
 เนื่องจาก Design ที่ให้มามีขนาดที่ใหญ่กว่า 1440 หากต้องการดูผลหน้าจอให้เหมือนกัน design ให้ใช้ขนาดที่ 1920 หรือขนาดที่ใหญ่กว่า 1440 จะได้หน้าจอที่ตรงตาม Design แต่หากถ้าเป็นขนาด 1440 หรือน้อยกว่า ผลหน้าจอจะอยู่ในรูปแบบ responsive
 
 ## Run project
-Run `npm start` to run this project. 
+Run `npm start` to run this project and then you have local path to display this project
 
 ## Development server
 
