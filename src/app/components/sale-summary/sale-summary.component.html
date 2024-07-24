@@ -1,0 +1,22 @@
+<app-box-container>
+    <div class="top-bar-container ">
+        <div class="title-container">
+            <div class="header-style">Today's Sales</div>
+            <div class="descrip-style">Sales Summary</div>
+        </div>
+        <div class="btn-export-container">
+            <mat-icon fontIcon="upload" class="material-symbols-outlined export-icon"></mat-icon>
+            <div class="text-style">Export</div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div *ngFor="let item of list;let i = index" class="content-style" [ngClass]="getColor(i)">
+            <div class="icon-container" [ngClass]="getBgIcon(i)">
+                <mat-icon fontIcon="{{item.icon}}" class="material-icons icon-style"></mat-icon>
+            </div>
+            <div class="header-content-style">{{item.header}}</div>
+            <div class="topic-style">{{item.topic}}</div>
+            <div class="plus-style">{{item.plus}} from yesterday</div>
+        </div>
+    </div>
+</app-box-container>

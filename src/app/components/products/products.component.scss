@@ -1,0 +1,117 @@
+@import "../app-localstyle";
+
+.top-bar-container {
+    font-size: 20px;
+    color: $font-color-header;
+    font-weight: 600;
+
+    @media (max-width: $max-width-large-laptop) {
+        font-size: 18px;
+    }
+}
+.content-container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    th {
+        padding: 10px 0px;
+        text-align: start;
+        font-family: "Open Sans" !important;
+        font-weight: 400;
+        font-size: 13px;
+        color: #96a5b8;
+    }
+    td {
+        border-top: 1px solid #edf2f6;
+        padding: 10px 0px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #444a6d;
+    }
+    .table-style {
+        .name-table {
+            width: 40%;
+        }
+        .percent-table {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            flex-wrap: nowrap;
+            padding-right: 20px;
+            justify-content: center;
+
+            .bar-progress {
+                position: relative;
+                width: 100%;
+                height: 4px;
+                border-radius: 8px;
+                align-content: center;
+            }
+            .percent {
+                position: absolute;
+                height: 4px;
+                border-radius: 8px;
+            }
+        }
+        .sales-table {
+            width: 10%;
+            .percent-box {
+                height: 24px;
+                width: 50px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+.blue-light {
+    background-color: #cde7ff;
+}
+.green-light {
+    background-color: #8cfac7;
+}
+.purple-light {
+    background-color: #c5a8ff;
+}
+.orange-light {
+    background-color: #ffd5a4;
+}
+.blue-dark {
+    background-color: #0095ff;
+}
+.green-dark {
+    background-color: #00e096;
+}
+.purple-dark {
+    background-color: #884dff;
+}
+.orange-dark {
+    background-color: #ff8f0d;
+}
+.class-1 {
+    background-color: #f0f9ff;
+    border: 1px solid #0095ff;
+    color: #0095ff;
+    text-align: center;
+}
+.class-2 {
+    background-color: #f0fdf4;
+    border: 1px solid #00e096;
+    color: #00e096;
+    text-align: center;
+}
+.class-3 {
+    background-color: #fbf1ff;
+    border: 1px solid #884dff;
+    color: #884dff;
+    text-align: center;
+}
+.class-4 {
+    background-color: #fef6e6;
+    border: 1px solid #ff8f0d;
+    color: #ff8f0d;
+    text-align: center;
+}

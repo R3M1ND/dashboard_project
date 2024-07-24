@@ -1,0 +1,211 @@
+@import "../app-localstyle";
+
+.sidebar {
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    border: 1px solid $color-white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100%;
+    width: max-content;
+    @media (max-width: $max-width-large-laptop) {
+        padding: 50px 20px;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 24px;
+        align-items: center;
+        margin-bottom: 48px;
+
+        .logo-box {
+            background-color: $color-purple;
+            width: 56px;
+            height: 56px;
+            border-radius: 8px;
+            stroke: $color-white;
+            stroke-width: 1;
+            stroke-linejoin: miter;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: $max-width-large-laptop) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .title-style {
+            color: $font-color-title;
+            font-weight: 600 !important;
+            font-size: 30px;
+
+            @media screen and (max-width: $max-width-large-laptop) {
+                font-size: 26px;
+            }
+        }
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        align-items: center;
+
+        .menu-container {
+            display: flex;
+            padding: 16px 24px;
+            column-gap: 24px;
+            margin-bottom: 24px;
+            cursor: pointer;
+            border-radius: 16px;
+            flex-wrap: wrap;
+            max-width: 250px;
+            width: 100%;
+
+            @media (max-width: $max-width-large-laptop) {
+                padding: 16px 18px;
+                column-gap: 18px;
+                max-width: 200px;
+            }
+
+            .menu-icon-style {
+                color: $color-blue-grey;
+                @media (max-width: $max-width-large-laptop) {
+                    font-size: 20px;
+                    align-content: center;
+                    text-align: center;
+                }
+            }
+            .menu-title-style {
+                color: $color-blue-grey;
+                font-size: 18px;
+                @media (max-width: $max-width-large-laptop) {
+                    font-size: 16px;
+                }
+            }
+        }
+        .menu-container:hover {
+            background-color: $color-purple;
+            color: $color-white;
+            box-shadow: 0px 20px 50px $color-shadow-sidebar;
+            max-width: 250px;
+            width: 100%;
+
+            @media (max-width: $max-width-large-laptop) {
+                max-width: 200px;
+            }
+
+            .menu-icon-style {
+                color: $color-white;
+            }
+            .menu-title-style {
+                color: $color-white;
+                font-weight: 600;
+            }
+        }
+        .menu-container.onClick {
+            background-color: $color-purple;
+            box-shadow: 0px 20px 50px $color-shadow-sidebar;
+
+            .menu-icon-style {
+                color: $color-white;
+            }
+            .menu-title-style {
+                color: $color-white;
+                font-weight: 600;
+            }
+        }
+    }
+    .pro-container {
+        background-color: $color-purple;
+        padding: 30px 47px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+        position: relative;
+        clip-path: margin-box;
+        max-height: 260px;
+        height: 100%;
+        @media (max-width: $max-width-large-laptop) {
+            padding: 20px 46px;
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        .circle-top {
+            top: -77%;
+            left: 10%;
+
+            background-image: linear-gradient(
+                to bottom left,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.4)
+            );
+        }
+        .circle-bottom {
+            bottom: -70%;
+            right: 55%;
+            background-image: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.4)
+            );
+        }
+
+        .icon-pro-container {
+            background-color: $color-white;
+            border-radius: 16px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .title-pro-style {
+            font-size: 20px;
+            color: $color-white;
+            font-weight: 600;
+            @media (max-width: $max-width-large-laptop) {
+                font-size: 18px;
+            }
+        }
+        .descrip-pro-style {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            text-align: center;
+            line-height: 16px;
+            @media (max-width: $max-width-large-laptop) {
+                font-size: 10px;
+            }
+        }
+        .btn-pro {
+            background-color: $color-white;
+            padding: 8px;
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            text-align: center;
+            color: $color-purple;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            @media (max-width: $max-width-large-laptop) {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+    }
+}

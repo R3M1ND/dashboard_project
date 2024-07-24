@@ -1,0 +1,24 @@
+@import "../app-localstyle";
+
+.top-bar-container {
+    font-size: 20px;
+    color: $font-color-header;
+    font-weight: 600;
+
+    @media (max-width: $max-width-large-laptop) {
+        font-size: 18px;
+    }
+}
+
+.chart-container {
+    margin-top: 12px;
+    width: 100%;
+    height: 280px;
+    @media (max-width: $max-width-large-laptop) {
+        margin-top: 30px;
+        height: 100%;
+    }
+    canvas#LineChart {
+        box-sizing: border-box;
+    }
+}

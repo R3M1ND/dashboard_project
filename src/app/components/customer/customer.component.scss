@@ -1,0 +1,109 @@
+@import "../app-localstyle";
+
+.top-bar-container {
+    font-size: 20px;
+    color: $font-color-header;
+    font-weight: 600;
+
+    @media (max-width: $max-width-large-laptop) {
+        font-size: 18px;
+    }
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    height: 100%;
+    margin-top: 21px;
+    box-sizing: border-box;
+    @media (max-width: $max-width-large-laptop) {
+        flex-wrap: wrap;
+    }
+
+    canvas#CustomerLineChart {
+        width: 100%;
+        height: 200px !important;
+    }
+
+    .line-container {
+        width: 100%;
+        height: 1px;
+        background-color: #edf2f6;
+    }
+    .summary-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 24px;
+
+        .line-break {
+            width: 1px;
+            height: 24px;
+            background-color: #bdc9d3;
+        }
+        .left-container {
+            display: flex;
+            flex-direction: row;
+            column-gap: 8px;
+            align-items: start;
+
+            .left-line-icon {
+                background-color: #0080da;
+            }
+            .left-circle-icon {
+                background-color: #0095ff;
+            }
+        }
+        .right-container {
+            display: flex;
+            flex-direction: row;
+            column-gap: 8px;
+            align-items: start;
+            .right-line-icon {
+                background-color: #05c283;
+            }
+            .right-circle-icon {
+                background-color: #07e098;
+            }
+        }
+    }
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    .line-icon {
+        position: relative;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+    }
+    .circle-icon {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+
+        position: absolute;
+    }
+}
+.label-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .title-style {
+        font-size: 16px;
+        color: #96a5b8;
+        font-weight: 400;
+    }
+    .text-style {
+        font-size: 14px;
+        font-weight: 500;
+        color: #222b45;
+    }
+}

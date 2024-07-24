@@ -1,0 +1,32 @@
+<div class="sidebar">
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="assets/dummy.png" alt="logo" width="24" height="24">
+        </div>
+        <div class="title-style">{{title}}</div>
+    </div>
+    <div class="content-container">
+        <div *ngFor="let item of items" (click)="toggleOnClickMenu(item.title)" class="menu-container"
+            [ngClass]="{'onClick': isMenuClick === item.title}">
+            <mat-icon class="material-icons-outlined menu-icon-style" fontIcon={{item.icon}}>
+            </mat-icon>
+            <div class="menu-title-style">{{item.title}}</div>
+        </div>
+    </div>
+    <div class="pro-container">
+        <div class="circle circle-top"></div>
+        <div class="circle circle-bottom"></div>
+        <div class="icon-pro-container">
+            <img src="assets/pro_dummy.png" alt="logo" width="24" height="24">
+        </div>
+        <div class="title-pro-style">{{title}} Pro</div>
+        <div class="descrip-pro-style">Get access to all <br> features on tetumbas</div>
+        <div class="btn-pro">Get Pro</div>
+
+
+    </div>
+
+
+
+
+</div>

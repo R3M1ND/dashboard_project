@@ -1,0 +1,26 @@
+<app-box-container>
+    <div class="top-bar-container">Top Products</div>
+    <table class="content-container">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Popularity</th>
+                <th>Sales</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of lists;let i = index" class="table-style">
+                <td>0{{item.id}}</td>
+                <td class="name-table">{{item.name}}</td>
+                <td class="percent-table">
+                    <div class="bar-progress" [ngClass]="getLightColor(i)"></div>
+                    <div class="percent" [style.width.%]="item.popularity" [ngClass]="getDarkColor(i)"></div>
+                </td>
+                <td class="sales-table">
+                    <div class="percent-box" [ngClass]="getPercentClass(i)">{{item.sales}}%</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</app-box-container>

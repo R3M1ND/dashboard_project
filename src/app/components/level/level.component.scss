@@ -1,0 +1,75 @@
+@import "../app-localstyle";
+
+.top-bar-container {
+    font-size: 20px;
+    color: $font-color-header;
+    font-weight: 600;
+
+    @media (max-width: $max-width-large-laptop) {
+        font-size: 18px;
+    }
+}
+
+.content-container {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    .line-container {
+        width: 100%;
+        height: 1px;
+        background-color: #edf2f6;
+    }
+    .label-container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        justify-content: center;
+
+        .line-break {
+            width: 1px;
+            height: 24px;
+            background-color: #bdc9d3;
+        }
+        .left-container {
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            .left-icon {
+                background-color: #0095ff;
+            }
+        }
+        .right-container {
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            .right-icon {
+                background-color: #00e096;
+            }
+        }
+    }
+}
+
+.icon-style {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+
+    margin-top: 8px;
+}
+.label-style {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    .title-style {
+        font-size: 16px;
+        font-weight: 400;
+        color: #96a5b8;
+    }
+    .sub-style {
+        font-size: 14px;
+        font-weight: 500;
+        color: #222b45;
+    }
+}

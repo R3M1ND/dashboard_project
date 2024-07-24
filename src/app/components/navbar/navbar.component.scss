@@ -1,0 +1,203 @@
+@import "../app-localstyle";
+
+.container {
+    width: 100%;
+    background-color: $color-white;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: $max-width-large-laptop) {
+        padding: 20px 30px;
+    }
+
+    .title-navbar-style {
+        font-size: 36px;
+        font-weight: 600;
+        color: $font-color-title;
+
+        @media screen and (max-width: $max-width-large-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 42px;
+
+        @media (max-width: $max-width-large-laptop) {
+            gap: 22px;
+        }
+
+        .search-container {
+            background-color: #f9fafb;
+            padding: 10px 24px;
+            width: 500px;
+            max-width: 513px;
+            height: 100%;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            @media (max-width: $max-width-large-laptop) {
+                width: 350px;
+                padding: 10px 18px;
+            }
+
+            .search-icon-style {
+                color: $color-purple;
+                font-weight: 600;
+            }
+            input[type="text"] {
+                width: 100%;
+                background-color: transparent;
+                font-size: 18px;
+                font-weight: 400;
+                font-family: $font-family;
+                color: $color-blue-grey;
+                border: none;
+                align-items: center;
+                @media (max-width: $max-width-large-laptop) {
+                    font-style: 16px;
+                }
+            }
+            ::placeholder {
+                color: $color-blue-grey;
+                @media (max-width: $max-width-large-laptop) {
+                    font-size: 16px;
+                }
+            }
+            input[type="text"]:focus {
+                outline: 0;
+            }
+        }
+        .lang-container {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            align-items: center;
+            cursor: pointer;
+
+            .lang-flag {
+                width: 24px;
+                height: 24px;
+                border-radius: 100%;
+                background-color: #374557;
+                position: relative;
+                clip-path: circle();
+
+                .flag-style {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            .lang-style {
+                font-size: 18px;
+                color: #374557;
+                font-weight: 600;
+                @media screen and (max-width: $max-width-large-laptop) {
+                    font-size: 16px;
+                }
+            }
+            .arrow-icon {
+                color: #a098ae;
+                font-size: 16px;
+                text-align: center;
+                align-content: center;
+            }
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 24px;
+
+            .noti-container {
+                width: 48px;
+                height: 48px;
+                background-color: #fffaf1;
+                border-radius: 8px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                clip-path: fill-box;
+                cursor: pointer;
+
+                .noti-icon {
+                    color: #ffa412;
+                }
+                .dot-container {
+                    width: 6px;
+                    height: 6px;
+                    background-color: #eb5757;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: 20%;
+                    left: 70%;
+                }
+            }
+            .acc-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+
+                .profile-container {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #374557;
+                    border-radius: 16px;
+                    position: relative;
+
+                    clip-path: fill-box;
+                    object-fit: cover;
+
+                    .user-img-style {
+                        width: 60px;
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+                .acc-name-container {
+                    display: flex;
+                    align-items: start;
+                    .name-container {
+                        margin-left: 16px;
+                        margin-right: 54px;
+
+                        @media screen and (max-width: $max-width-large-laptop) {
+                            margin-right: 34px;
+                        }
+
+                        .name-style {
+                            font-size: 16px;
+                            color: $font-color-title;
+                            font-weight: 500;
+                        }
+                        .role-style {
+                            font-size: 14px;
+                            color: $color-blue-grey;
+                        }
+                    }
+                    .arrow-profile-icon {
+                        color: #151d48;
+                    }
+                }
+            }
+        }
+    }
+}

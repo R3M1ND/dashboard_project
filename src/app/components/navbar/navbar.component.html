@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="title-navbar-style left-container">Dashboard</div>
+    <div class="right-container">
+        <div class="search-container">
+            <mat-icon class="material-symbols-outlined search-icon-style" fontIcon="search"></mat-icon>
+            <input id="text" type="text" placeholder="Search here..." [formAction]="text" class="form-style">
+
+        </div>
+        <div class="lang-container">
+            <div class="lang-flag">
+                <img src="assets/eng_lang.png" alt="eng" class="flag-style">
+            </div>
+            <div class="lang-style">Eng (US)</div>
+            <mat-icon fontIcon="keyboard_arrow_down" class="material-icons-outlined arrow-icon"></mat-icon>
+        </div>
+        <div class="menu-container">
+            <div class="noti-container">
+                <div class="dot-container"></div>
+                <mat-icon fontIcon="notifications" class="material-icons-outlined noti-icon"></mat-icon>
+            </div>
+            <div class="acc-container">
+                <div class="profile-container">
+                    <img src="assets/user_profile.jpg" alt="user" class="user-img-style">
+                </div>
+                <div class="acc-name-container">
+                    <div class="name-container">
+                        <div class="name-style">{{name}}</div>
+                        <div class="role-style">{{role}}</div>
+                    </div>
+                    <mat-icon fontIcon="keyboard_arrow_down"
+                        class="material-symbols-outlined arrow-profile-icon"></mat-icon>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>

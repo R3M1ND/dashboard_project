@@ -1,0 +1,21 @@
+@import "../app-localstyle";
+
+.top-bar-container {
+    font-size: 20px;
+    color: $font-color-header;
+    font-weight: 600;
+
+    @media (max-width: $max-width-large-laptop) {
+        font-size: 18px;
+    }
+}
+.img-container {
+    margin-top: 12px;
+    width: 380px;
+    height: fit-content;
+    .img-style {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+}

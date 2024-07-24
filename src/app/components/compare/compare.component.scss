@@ -1,0 +1,107 @@
+@import "../app-localstyle";
+
+.top-bar-container {
+    font-size: 20px;
+    color: $font-color-header;
+    font-weight: 600;
+
+    @media (max-width: $max-width-large-laptop) {
+        font-size: 18px;
+    }
+}
+
+.content-container {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    box-sizing: border-box;
+    height: 100%;
+
+    @media (max-width: $max-width-large-laptop) {
+        width: 100%;
+        align-items: center;
+    }
+
+    .chart-container {
+        height: 157px;
+        canvas#CompareBarChart {
+            box-sizing: border-box;
+        }
+    }
+
+    .label-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        row-gap: 15px;
+
+        .label-style {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .left-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                column-gap: 10px;
+                .icon-container {
+                    display: flex;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 6px;
+                    align-items: center;
+                    justify-content: center;
+                    .icon-style {
+                        font-size: 17px;
+                        text-align: center;
+                        align-content: center;
+                    }
+                }
+
+                .text-container {
+                    .title-style {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #151d48;
+                        line-height: 16px;
+                    }
+                    .sub-style {
+                        font-size: 10px;
+                        font-weight: 400;
+                        color: $color-blue-grey;
+                        line-height: 16px;
+                    }
+                }
+            }
+            .right-container {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .reality-sales-container {
+            .reality-icon-container {
+                background-color: #e2fff3;
+            }
+            .reality-icon-style {
+                color: #4ab58e;
+            }
+            .reality-text-style {
+                color: #27ae60;
+            }
+        }
+        .target-sales-container {
+            .target-icon-container {
+                background-color: #fff4de;
+            }
+            .target-icon-container {
+                color: #ffa800;
+            }
+            .target-text-style {
+                color: #ffa412;
+            }
+        }
+    }
+}
