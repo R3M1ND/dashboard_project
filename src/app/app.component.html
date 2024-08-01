@@ -1,22 +1,9 @@
 <div class="row">
-    <app-sidebar class="app-sidebar"></app-sidebar>
+    <app-sidebar class="app-sidebar" [title]="sidebarTitle" [items]="sideBarItems"
+        (onMenuClick)="onMenuItemClick($event)"></app-sidebar>
     <div class="container">
-        <app-navbar class="app-navbar"></app-navbar>
-        <main class="main">
-            <div class="first-row">
-                <app-sale-summary class="sale-container"></app-sale-summary>
-                <app-visitor class="visitor-container"></app-visitor>
-            </div>
-            <div class="second-row">
-                <app-revenue class="revenue-container"></app-revenue>
-                <app-customer class="customer-container"></app-customer>
-                <app-compare class="compare-container"></app-compare>
-            </div>
-            <div class="third-row">
-                <app-products class="products-container"></app-products>
-                <app-map class="map-container"></app-map>
-                <app-level class="level-container"></app-level>
-            </div>
-        </main>
+        <app-navbar class="app-navbar" [title]="showSelectedMenu"></app-navbar>
+        <router-outlet />
     </div>
+
 </div>

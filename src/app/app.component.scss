@@ -1,4 +1,4 @@
-@import "components/app-localstyle";
+@import "../app-localstyle";
 
 .row {
     display: flex;
@@ -9,143 +9,11 @@
 .container {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     .app-navbar {
         float: left;
         top: 0;
-    }
-
-    .main {
-        float: left;
-        padding: 30px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        row-gap: 31px;
-
-        @media (max-width: $max-width-large-laptop) {
-            flex-wrap: wrap;
-        }
-        .first-row {
-            display: flex;
-            flex-direction: row;
-            column-gap: 31px;
-            justify-content: start;
-            width: 100%;
-            flex-wrap: nowrap;
-
-            .sale-container {
-                max-width: 877px;
-                width: 100%;
-
-                @media (max-width: $max-width-large-laptop) {
-                    max-height: fit-content;
-                    flex-wrap: wrap;
-                    width: fit-content;
-                    height: 100%;
-                }
-            }
-            .visitor-container {
-                max-width: 590px;
-
-                width: 100%;
-                @media (max-width: $max-width-large-laptop) {
-                    height: 100%;
-                }
-            }
-        }
-        .second-row {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            width: 100%;
-            flex-wrap: nowrap;
-            column-gap: 31px;
-            @media (max-width: $max-width-large-laptop) {
-                flex-wrap: wrap;
-                row-gap: 31px;
-            }
-
-            .revenue-container {
-                max-width: 645px;
-                width: 645px;
-                height: 100%;
-                @media (max-width: $max-width-large-laptop) {
-                    max-width: 600px;
-                    max-height: 351px;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .customer-container {
-                max-width: 400px;
-                height: 100%;
-                width: 100%;
-                @media (max-width: $max-width-large-laptop) {
-                    max-width: 450px;
-                    max-height: 351px;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .compare-container {
-                max-width: 400px;
-                height: 100%;
-                width: 100%;
-                @media (max-width: $max-width-large-laptop) {
-                    max-width: 450px;
-                    max-height: 351px;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-        .third-row {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            column-gap: 31px;
-            width: 100%;
-            flex-wrap: nowrap;
-            @media (max-width: $max-width-large-laptop) {
-                flex-wrap: wrap;
-                row-gap: 31px;
-            }
-
-            .products-container {
-                max-width: 645px;
-                width: 645px;
-                height: 100%;
-                @media (max-width: $max-width-large-laptop) {
-                    max-width: 600px;
-                    max-height: 351px;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .map-container {
-                max-width: 400px;
-                height: 100%;
-                width: 100%;
-                @media (max-width: $max-width-large-laptop) {
-                    max-width: 450px;
-                    max-height: 351px;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .level-container {
-                max-width: 400px;
-                height: 100%;
-                width: 100%;
-                @media (max-width: $max-width-large-laptop) {
-                    max-width: 450px;
-                    max-height: 351px;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
     }
 }

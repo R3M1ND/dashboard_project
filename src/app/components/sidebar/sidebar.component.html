@@ -7,7 +7,7 @@
     </div>
     <div class="content-container">
         <div *ngFor="let item of items" (click)="toggleOnClickMenu(item.title)" class="menu-container"
-            [ngClass]="{'onClick': isMenuClick === item.title}">
+            [ngClass]="{'onClick': isMenuClick === item.title}" routerLink="{{item.page}}">
             <mat-icon class="material-icons-outlined menu-icon-style" fontIcon={{item.icon}}>
             </mat-icon>
             <div class="menu-title-style">{{item.title}}</div>

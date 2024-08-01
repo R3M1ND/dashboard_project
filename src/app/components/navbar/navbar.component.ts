@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  @Input() title: string = '';
   text = new FormControl('');
   name = 'Musfiq';
   role = 'Admin';

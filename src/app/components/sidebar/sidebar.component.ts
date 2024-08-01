@@ -1,35 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon'
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [MatIconModule, CommonModule],
+  imports: [MatIconModule, CommonModule, RouterLink],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrl: './sidebar.component.scss',
+
 })
 export class SidebarComponent {
-  title = 'Dabang';
+  @Input() title: string = '';
+  @Input() items: { title: string, icon: string, page: string }[] = [];
+  @Output() onMenuClick = new EventEmitter<string>();
+
   isMenuClick: string | null = null;
 
-  items = [
-    { title: 'Dashboard', icon: 'incomplete_circle' },
-    { title: 'Leaderboard', icon: 'leaderboard' },
-    { title: 'order', icon: 'shopping_cart' },
-    { title: 'Products', icon: 'local_mall' },
-    { title: 'Sales Report', icon: 'show_chart' },
-    { title: 'Messages', icon: 'sms' },
-    { title: 'Settings', icon: 'settings' },
-    { title: 'Sign Out', icon: 'logout' },
-  ];
 
   toggleOnClickMenu(item: string) {
     if (this.isMenuClick === item) {
       this.isMenuClick = null;
-
     } else {
       this.isMenuClick = item;
     }
+    this.onMenuClick.emit(item);
   }
+
+
 }
